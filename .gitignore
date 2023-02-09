@@ -40,3 +40,8 @@ yarn-error.log*
 
 # contentlayer
 .contentlayer
+
+# wesjet
+.wesjet
+
+.gitpod.yml

@@ -4,22 +4,22 @@ import type { InferGetStaticPropsType } from 'next'
 import { useLiveReload, useMDXComponent } from 'wesjet-nextjs-plugin/hooks'
 import type { FC } from 'react'
 import { allDocs } from 'wesjet/jetpack'
-import { Container } from '../../components/common/Container'
+import { DefaultLayout } from '../../components/Layouts/Default'
 import { defineStaticProps, toParams } from '../../utils/next'
-import { DocsNavigation } from 'src/components/docs/DocsNavigation'
+import { DocsNavigation } from 'src/components/Widget/docs/DocsNavigation'
 import { Callout } from '../../components/common/Callout'
-import { DocsCard as Card } from 'src/components/docs/DocsCard'
+import { DocsCard as Card } from 'src/components/Widget/docs/DocsCard'
 import { Card as ChildCard } from '../../components/common/Card'
 import { Link } from 'src/components/common/Link'
 import Image from 'next/image'
-import { DocsHeader } from '../../components/docs/DocsHeader'
+import { DocsHeader } from '../../components/Widget/docs/DocsHeader'
 import { ChevronLink } from '../../components/common/ChevronLink'
 import { Label } from '../../components/common/Label'
-import { DocsFooter } from '../../components/docs/DocsFooter'
+import { DocsFooter } from '../../components/Widget/docs/DocsFooter'
 import { PageNavigation } from 'src/components/common/PageNavigation'
 import { buildDocsTree } from 'src/utils/build-docs-tree'
 import { H2, H3, H4 } from 'src/components/common/Headings'
-import { OptionsTable, OptionTitle, OptionDescription } from 'src/components/docs/OptionsTable'
+import { OptionsTable, OptionTitle, OptionDescription } from 'src/components/Widget/docs/OptionsTable'
 import { useRouter } from 'next/router'
 import * as ScrollArea from '@radix-ui/react-scroll-area'
 
@@ -74,7 +74,7 @@ const Page: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ doc, tree, b
   const MDXContent = useMDXComponent(doc.body.code || '')
 
   return (
-    <Container title={doc.title + ' – Contentlayer'} description={doc.excerpt}>
+    <DefaultLayout title={doc.title + ' – Contentlayer'} description={doc.excerpt}>
       <div className="relative mx-auto w-full max-w-screen-2xl lg:flex lg:items-start">
         <div
           style={{ height: 'calc(100vh - 64px)' }}
@@ -121,7 +121,7 @@ const Page: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ doc, tree, b
           <div className="absolute inset-x-0 bottom-0 h-8 bg-gradient-to-b from-white/0 to-white/100 dark:from-gray-950/0 dark:to-gray-950/100" />
         </div>
       </div>
-    </Container>
+    </DefaultLayout>
   )
 }
 

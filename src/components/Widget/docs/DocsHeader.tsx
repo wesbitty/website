@@ -2,7 +2,7 @@ import { FC, Fragment, useState, useEffect } from 'react'
 import { TreeNode } from 'types/TreeNode'
 import Link from 'next/link'
 import { DocsNavigation } from './DocsNavigation'
-import { Icon } from '../common/Icon'
+import { Icon } from '../../Icon'
 import { useRouter } from 'next/router'
 
 export const DocsHeader: FC<{ tree: TreeNode[]; breadcrumbs: any[]; title: string }> = ({
@@ -87,9 +87,8 @@ export const DocsHeader: FC<{ tree: TreeNode[]; breadcrumbs: any[]; title: strin
         </div>
       )}
       <div
-        className={`fixed top-16 z-10 hidden h-16 w-full border-b border-gray-200 bg-white bg-opacity-90 backdrop-blur backdrop-filter transition-opacity duration-200 dark:border-gray-800 dark:bg-gray-950 lg:block ${
-          top ? 'opacity-0' : 'opacity-100'
-        }`}
+        className={`fixed top-16 z-10 hidden h-16 w-full border-b border-gray-200 bg-white bg-opacity-90 backdrop-blur backdrop-filter transition-opacity duration-200 dark:border-gray-800 dark:bg-gray-950 lg:block ${top ? 'opacity-0' : 'opacity-100'
+          }`}
       >
         <ul className="flex h-full items-center space-x-2 px-16 text-sm">
           {breadcrumbs.map(({ path, title }, index) => (

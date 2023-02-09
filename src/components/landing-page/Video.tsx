@@ -1,7 +1,7 @@
 import { FC, useState } from 'react'
 import Image from 'next/image'
 import { Card } from '../common/Card'
-import { Icon } from '../common/Icon'
+import { Icon } from '../Icon'
 
 export const Video: FC<{
   thumbnail: { url: string; alt: string; width?: number; height?: number }

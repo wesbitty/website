@@ -1,7 +1,7 @@
 import { Post } from 'wesjet/jetpack'
 import { FC } from 'react'
 import Link from 'next/link'
-import { Icon } from 'src/components/common/Icon'
+import { Icon } from 'src/components/Icon'
 import { format } from 'date-fns'
 
 export const BlogDetails: FC<{ post: Post; className?: string }> = ({ post, className }) => {

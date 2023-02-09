@@ -1,4 +1,4 @@
-import { IconName } from '../common/Icon'
+import { IconName } from '../Icon'
 import { FC } from 'react'
 import { Button } from '../common/Button'
 import { CodeWindow } from './CodeWindow'

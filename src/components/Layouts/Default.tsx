@@ -2,10 +2,10 @@ import { FC } from 'react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { SearchProvider } from '../SearchContext'
-import { MainNavigation } from './MainNavigation'
+import { MainNavigation } from '../common/MainNavigation'
 import { Footer } from '../Widget'
 
-export const Container: FC<any> = ({ children, ...customMeta }) => {
+export const DefaultLayout: FC<any> = ({ children, ...customMeta }) => {
   const router = useRouter()
 
   const baseUrl = `https://www.wesbitty.com`

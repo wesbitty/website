@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import classNames from 'classnames'
 import { TreeNode } from 'types/TreeNode'
-import { Label } from '../common/Label'
-import { Icon } from '../common/Icon'
+import { Label } from '../../common/Label'
+import { Icon } from '../../Icon'
 
 const NavLink: FC<{
   title: string
@@ -21,14 +21,12 @@ const NavLink: FC<{
       className={classNames(
         'group flex h-8 items-center justify-between space-x-2 whitespace-nowrap rounded-md px-3 text-sm leading-none',
         url == activePath
-          ? `${
-              level == 0 ? 'font-medium' : 'font-normal'
-            } bg-violet-50 text-violet-900 dark:bg-violet-500/20 dark:text-violet-50`
-          : `hover:bg-gray-50 dark:hover:bg-gray-900 ${
-              level == 0
-                ? 'font-medium text-slate-600 hover:text-slate-700 dark:text-slate-300 dark:hover:text-slate-200'
-                : 'font-normal hover:text-slate-600 dark:hover:text-slate-300'
-            }`,
+          ? `${level == 0 ? 'font-medium' : 'font-normal'
+          } bg-violet-50 text-violet-900 dark:bg-violet-500/20 dark:text-violet-50`
+          : `hover:bg-gray-50 dark:hover:bg-gray-900 ${level == 0
+            ? 'font-medium text-slate-600 hover:text-slate-700 dark:text-slate-300 dark:hover:text-slate-200'
+            : 'font-normal hover:text-slate-600 dark:hover:text-slate-300'
+          }`,
       )}
     >
       <Link href={url}>

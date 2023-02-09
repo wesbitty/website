@@ -15,7 +15,7 @@ import { type CodeSnippets, HowItWorks, codeSnippets } from '../components/landi
 import { FAQ } from '../components/landing-page/FAQ'
 import { Tweets } from '../components/landing-page/Tweets'
 import { Playground } from '../components/landing-page/Playground'
-import { Container } from '../components/common/Container'
+import { DefaultLayout } from '../components/Layouts/Default'
 import { buildExamplesTree } from '../utils/build-examples-tree'
 
 export const getStaticProps = defineStaticProps(async (_context) => {
@@ -50,7 +50,7 @@ const Page: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ prepro
   }, [preferredColorScheme])
 
   return (
-    <Container>
+    <DefaultLayout>
       <Hero />
       <Support />
       <Testimonials usedByCount={usedByCount} />
@@ -59,7 +59,7 @@ const Page: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ prepro
       <Playground />
       <FAQ />
       <Tweets />
-    </Container>
+    </DefaultLayout>
   )
 }
 

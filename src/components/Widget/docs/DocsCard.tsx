@@ -1,6 +1,6 @@
-import { Icon, IconName } from '../common/Icon'
-import { Label } from '../common/Label'
-import { ChevronLink } from '../common/ChevronLink'
+import { Icon, IconName } from '../../Icon'
+import { Label } from '../../common/Label'
+import { ChevronLink } from '../../common/ChevronLink'
 
 export const DocsCard: React.FC<
   React.PropsWithChildren<{

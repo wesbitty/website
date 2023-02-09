@@ -12,7 +12,7 @@ import {
 } from 'kbar'
 import { TreeNode } from 'types/TreeNode'
 import { Card } from './common/Card'
-import { Icon } from './common/Icon'
+import { Icon } from './Icon'
 import { Label } from './common/Label'
 import { buildDocsTree } from 'src/utils/build-docs-tree'
 import { allDocs, allExamples, allPosts, Post } from 'wesjet/jetpack'

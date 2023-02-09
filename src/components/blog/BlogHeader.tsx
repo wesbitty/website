@@ -2,7 +2,7 @@ import { Post } from 'wesjet/jetpack'
 import { FC, useEffect, useState } from 'react'
 import { BlogDetails } from 'src/components/blog/BlogDetails'
 import Link from 'next/link'
-import { Icon } from 'src/components/common/Icon'
+import { Icon } from 'src/components/Icon'
 import Image from 'next/image'
 import { format } from 'date-fns'
 

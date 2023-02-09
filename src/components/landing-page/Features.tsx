@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { FC } from 'react'
 import { Checklist } from './Checklist'
 import { Heading } from './Heading'
-import { Icon, IconName } from '../common/Icon'
+import { Icon, IconName } from '../Icon'
 import { Paragraph } from './Paragraph'
 
 const content = {

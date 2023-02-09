@@ -1,5 +1,5 @@
 import { Card } from '../common/Card'
-import { Icon } from '../common/Icon'
+import { Icon } from '../Icon'
 
 export const TLDR: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
   return (

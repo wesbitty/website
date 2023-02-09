@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import Link from 'next/link'
-import { Icon } from './Icon'
+import { Icon } from '../Icon'
 
 const isExternalUrl = (link: string): boolean => !link.startsWith('/')
 

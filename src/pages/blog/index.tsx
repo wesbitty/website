@@ -4,7 +4,7 @@ import type { InferGetStaticPropsType } from 'next'
 import { useLiveReload } from 'wesjet-nextjs-plugin/hooks'
 import type { FC } from 'react'
 import { allDocs, allPosts } from 'wesjet/jetpack'
-import { Container } from '../../components/common/Container'
+import { DefaultLayout } from '../../components/Layouts/Default'
 import { defineStaticProps } from '../../utils/next'
 import { Heading } from '../../components/landing-page/Heading'
 import { Paragraph } from '../../components/landing-page/Paragraph'
@@ -21,11 +21,11 @@ export const getStaticProps = defineStaticProps(async (context) => {
   return { props: { posts } }
 })
 
-const Blog: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ posts }) => {
+const BlogPage: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ posts }) => {
   useLiveReload()
 
   return (
-    <Container title="Blog – Contentlayer" description={content.description} urlPath="/blog">
+    <DefaultLayout title="Blog – Contentlayer" description={content.description} urlPath="/blog">
       <div className="w-full max-w-screen-xl px-4 py-8 mx-auto space-y-16 md:px-8 md:py-24 lg:space-y-24 lg:py-32">
         <div className="max-w-3xl space-y-8">
           <Heading level={1}>{content.title}</Heading>
@@ -37,8 +37,8 @@ const Blog: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ posts }) => 
           ))}
         </div>
       </div>
-    </Container>
+    </DefaultLayout>
   )
 }
 
-export default Blog
+export default BlogPage

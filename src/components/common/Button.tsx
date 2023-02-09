@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import classnames from 'classnames'
-import { Icon, IconName } from './Icon'
+import { Icon, IconName } from '../Icon'
 import Link from 'next/link'
 import { isExternalUrl } from '../../utils/helpers'
 

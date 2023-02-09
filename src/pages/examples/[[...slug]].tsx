@@ -5,20 +5,20 @@ import { useLiveReload, useMDXComponent } from 'wesjet-nextjs-plugin/hooks'
 import { FC, useEffect, useRef, useState } from 'react'
 import stackblitz, { type VM } from '@stackblitz/sdk'
 import { allExamples } from 'wesjet/jetpack'
-import { Container } from '../../components/common/Container'
+import { DefaultLayout } from '../../components/Layouts/Default'
 import { defineStaticProps, toParams } from '../../utils/next'
-import { DocsNavigation } from 'src/components/docs/DocsNavigation'
+import { DocsNavigation } from 'src/components/Widget/docs/DocsNavigation'
 import { Callout } from '../../components/common/Callout'
-import { DocsCard as Card } from '../../components/docs/DocsCard'
+import { DocsCard as Card } from '../../components/Widget/docs/DocsCard'
 import { Link } from 'src/components/common/Link'
 import Image from 'next/image'
-import { DocsHeader } from '../../components/docs/DocsHeader'
+import { DocsHeader } from '../../components/Widget/docs/DocsHeader'
 import { ChevronLink } from '../../components/common/ChevronLink'
 import { Label } from '../../components/common/Label'
 import { buildExamplesTree } from 'src/utils/build-examples-tree'
 import { H2, H3, H4 } from 'src/components/common/Headings'
-import { OptionsTable, OptionTitle, OptionDescription } from 'src/components/docs/OptionsTable'
-import { ExamplesFooter } from 'src/components/examples/ExamplesFooter'
+import { OptionsTable, OptionTitle, OptionDescription } from 'src/components/Widget/docs/OptionsTable'
+import { StudioFooterWidget } from 'src/components/Widget'
 import { Button } from 'src/components/common/Button'
 
 export const getStaticPaths = async () => {
@@ -68,7 +68,7 @@ const mdxComponents = {
   OptionDescription,
 }
 
-const Page: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ example, tree, breadcrumbs }) => {
+const StudioPage: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ example, tree, breadcrumbs }) => {
   useLiveReload()
   const MDXContent = useMDXComponent(example.body.code || '')
   const ref = useRef<HTMLDivElement>(null)
@@ -93,7 +93,7 @@ const Page: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ example, tre
   }, [vm, fullScreen])
 
   return (
-    <Container title={example.title + ' – Contentlayer'} description={example.excerpt}>
+    <DefaultLayout title={example.title + ' – Contentlayer'} description={example.excerpt}>
       <div className="relative mx-auto w-full max-w-screen-2xl lg:flex lg:items-start">
         <div
           style={{ height: 'calc(100vh - 64px)' }}
@@ -133,12 +133,12 @@ const Page: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ example, tre
                 </div>
               </div>
             )}
-            <ExamplesFooter example={example} />
+            <StudioFooterWidget example={example} />
           </div>
         </div>
       </div>
-    </Container>
+    </DefaultLayout>
   )
 }
 
-export default Page
+export default StudioPage

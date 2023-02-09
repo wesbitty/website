@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { FC, useState } from 'react'
 import { useKBar } from 'kbar'
-import { Icon, IconName } from './Icon'
+import { Icon, IconName } from '../Icon'
 import { Label } from './Label'
 import { Logo } from './Logo'
 import { useRouter } from 'next/router'
@@ -31,11 +31,10 @@ const NavLink: FC<{ label?: string; hideLabel?: boolean; icon?: IconName; url: s
   return (
     <Link href={url}>
       <a
-        className={`group flex h-8 items-center rounded-md bg-transparent px-3 text-sm font-medium leading-none ${
-          active
+        className={`group flex h-8 items-center rounded-md bg-transparent px-3 text-sm font-medium leading-none ${active
             ? 'bg-violet-50 text-violet-900 dark:bg-violet-500/20 dark:text-violet-50'
             : 'text-slate-600 hover:bg-gray-50 hover:text-slate-700 dark:text-slate-300 dark:hover:bg-gray-900 dark:hover:text-slate-200'
-        }`}
+          }`}
         target={isExternalUrl(url) ? '_blank' : undefined}
         rel={isExternalUrl(url) ? 'noreferrer' : undefined}
       >

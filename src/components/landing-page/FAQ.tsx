@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { Button } from '../common/Button'
 import { Heading } from './Heading'
-import { IconName } from '../common/Icon'
+import { IconName } from '../Icon'
 import { Paragraph } from './Paragraph'
 import Markdown from 'markdown-to-jsx'
 

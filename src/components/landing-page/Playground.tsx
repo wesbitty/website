@@ -1,7 +1,7 @@
 import { FC, useEffect, useRef, useState } from 'react'
 import stackblitz from '@stackblitz/sdk'
 import type * as Stackblitz from '@stackblitz/sdk'
-import { Arrow } from '../common/Arrow'
+import { Arrow } from '../Arrow'
 import { Card } from '../common/Card'
 import { Heading } from './Heading'
 import { arraysAreEqual } from '../../utils/helpers'

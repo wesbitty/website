@@ -1,13 +1,13 @@
 import React from 'react'
-import { Container } from '../components/common/Container'
-import { Icon } from 'src/components/common/Icon'
+import { DefaultLayout } from '../components/Layouts/Default'
+import { Icon } from 'src/components/Icon'
 import { Heading } from 'src/components/landing-page/Heading'
 import { Paragraph } from 'src/components/landing-page/Paragraph'
 import { Label } from 'src/components/common/Label'
 
 const NotFound = () => {
   return (
-    <Container>
+    <DefaultLayout>
       <div className="relative overflow-hidden">
         <div className="relative flex flex-col items-center justify-center pt-32 md:pt-56">
           <Heading level={1} className="flex items-center font-black">
@@ -23,7 +23,7 @@ const NotFound = () => {
           </Paragraph>
         </div>
       </div>
-    </Container>
+    </DefaultLayout>
   )
 }
 

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { FC } from 'react'
-import { Arrow } from '../common/Arrow'
+import { Arrow } from '../Arrow'
 import { FileTree } from './FileTree'
 
 export const DataTransformation: FC<{ from: { type: string; data: any }; to: { type: string; data: any } }> = ({

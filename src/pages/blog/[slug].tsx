@@ -4,10 +4,10 @@ import type { InferGetStaticPropsType } from 'next'
 import { useLiveReload, useMDXComponent } from 'wesjet-nextjs-plugin/hooks'
 import { FC, useEffect, useMemo, useState } from 'react'
 import { allPosts } from 'wesjet/jetpack'
-import { Container } from '../../components/common/Container'
+import { DefaultLayout } from '../../components/Layouts/Default'
 import { defineStaticProps } from '../../utils/next'
 import { Callout } from '../../components/common/Callout'
-import { DocsCard as Card } from '../../components/docs/DocsCard'
+import { DocsCard as Card } from '../../components/Widget/docs/DocsCard'
 import { Link } from 'src/components/common/Link'
 import NextImage from 'next/image'
 import { ChevronLink } from '../../components/common/ChevronLink'
@@ -159,7 +159,7 @@ const Post: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ post, betaSn
   )
 
   return (
-    <Container
+    <DefaultLayout
       title={post.title + ' – Contentlayer'}
       description={post.excerpt}
       imagePath={post.seo?.imagePath ?? null}
@@ -176,7 +176,7 @@ const Post: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ post, betaSn
           {post.related_posts && <RelatedPosts posts={post.related_posts} />}
         </div>
       </div>
-    </Container>
+    </DefaultLayout>
   )
 }
 

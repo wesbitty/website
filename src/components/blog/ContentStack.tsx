@@ -1,4 +1,4 @@
-import { Icon, IconName } from '../common/Icon'
+import { Icon, IconName } from '../Icon'
 
 /* ----- Types ----- */
 

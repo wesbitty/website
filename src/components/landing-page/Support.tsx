@@ -41,7 +41,7 @@ const content = {
       {
         logo: { file: 'mdx.svg', width: 77, height: 32 },
         label: 'MDX',
-        url: '/docs/sources/files',
+        url: '/docs/maker/files',
         supported: true,
       },
       {
@@ -121,13 +121,12 @@ export const Support: FC = () => {
                       sideOffset={10}
                       className="rounded bg-gray-800 px-3 py-1.5 text-sm text-slate-100 shadow-xl shadow-white dark:bg-violet-200 dark:text-violet-900 dark:shadow-black"
                     >
-                      {`${label}${
-                        supported === true
+                      {`${label}${supported === true
                           ? ''
                           : supported === 'Planned'
-                          ? ' – Planned'
-                          : ' – Considering to add support.'
-                      }`}
+                            ? ' – Planned'
+                            : ' – Considering to add support.'
+                        }`}
                       <Tooltip.Arrow className="mx-1 fill-current text-gray-800 dark:text-violet-200" />
                     </Tooltip.Content>
                   </Tooltip.Root>

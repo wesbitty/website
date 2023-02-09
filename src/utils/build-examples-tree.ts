@@ -1,5 +1,5 @@
 import { children } from 'cheerio/lib/api/traversing'
-import { Example } from 'contentlayer/generated'
+import { Example } from 'wesjet/jetpack'
 import { TreeNode } from 'types/TreeNode'
 
 export const buildExamplesTree = (examples: Example[], parentPathNames: string[] = []): TreeNode[] => {

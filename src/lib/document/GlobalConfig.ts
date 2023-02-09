@@ -1,4 +1,4 @@
-import { defineDocumentType } from "contentlayer/source-files";
+import { defineDocumentType } from "wesjet/maker";
 
 export const GlobalConfig = defineDocumentType(() => ({
   name: "GlobalConfig",

@@ -1,4 +1,4 @@
-import { defineDocumentType } from 'contentlayer/source-files'
+import { defineDocumentType } from 'wesjet/maker'
 import { getLastEditedDate, urlFromFilePath } from '../utils'
 
 export const Example = defineDocumentType(() => ({

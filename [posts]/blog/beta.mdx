@@ -118,7 +118,7 @@ And that’s why we built Contentlayer. **Contentlayer makes working with conten
 
 ### How Contentlayer Works
 
-After installing Contentlayer via `npm install contentlayer next-contentlayer` you're ready to go:
+After installing Contentlayer via `npm install contentlayer wesjet-nextjs-plugin` you're ready to go:
 
 1. First you need to tell Contentlayer where your content lives and which format and structure it has. There are different kinds of content sources - here we're using local Markdown files.
 
@@ -142,7 +142,7 @@ Go ahead - give it a try! For example, make a change to one of the Markdown file
   <Playground githubRepo="wesbitty/wesjet-starter" openFile="posts/change-me.md" />
 </div>
 
-- The content is generated into a `.contentlayer/generated` directory that includes JSON content caches, exported collections of data, and automatically-generated types.
+- The content is generated into a `.wesjet/jetpack` directory that includes JSON content caches, exported collections of data, and automatically-generated types.
 - The `pages/posts/[[...slug]].tsx` page brings in the content directly, manipulates it as needed, and passes it onto the page component.
 
 ## Benefits of Contentlayer

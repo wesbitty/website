@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { allPosts, Post, RelatedPost } from 'contentlayer/generated'
+import { allPosts, Post, RelatedPost } from 'wesjet/jetpack'
 import { Card } from '../common/Card'
 import { BlogPreview } from './BlogPreview'
 

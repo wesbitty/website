@@ -2,7 +2,7 @@ import { FC } from 'react'
 import Link from 'next/link'
 import { Icon } from '../common/Icon'
 import { format } from 'date-fns'
-import { Doc } from 'contentlayer/generated'
+import { Doc } from 'wesjet/jetpack'
 
 const githubBranch = 'main'
 const githubBaseUrl = `https://github.com/wesbitty/website/blob/${githubBranch}/content/`

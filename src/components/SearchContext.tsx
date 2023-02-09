@@ -15,7 +15,7 @@ import { Card } from './common/Card'
 import { Icon } from './common/Icon'
 import { Label } from './common/Label'
 import { buildDocsTree } from 'src/utils/build-docs-tree'
-import { allDocs, allExamples, allPosts, Post } from 'contentlayer/generated'
+import { allDocs, allExamples, allPosts, Post } from 'wesjet/jetpack'
 import { buildExamplesTree } from 'src/utils/build-examples-tree'
 import { format } from 'date-fns'
 

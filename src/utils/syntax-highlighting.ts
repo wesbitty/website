@@ -31,5 +31,5 @@ export const snippetToHtml = async (snippet: string, colorScheme: ColorScheme) =
     twoslash,
   )
 
-  return html.replace('./Hooks', 'contentlayer/generated')
+  return html.replace('./Hooks', 'wesjet/jetpack')
 }

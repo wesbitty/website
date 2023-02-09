@@ -1,9 +1,9 @@
 import type { InferGetStaticPropsType } from 'next'
 // TODO remove eslint-disable when fixed https://github.com/import-js/eslint-plugin-import/issues/1810
 // eslint-disable-next-line import/no-unresolved
-import { useLiveReload, useMDXComponent } from 'next-contentlayer/hooks'
+import { useLiveReload, useMDXComponent } from 'wesjet-nextjs-plugin/hooks'
 import type { FC } from 'react'
-import { allDocs } from 'contentlayer/generated'
+import { allDocs } from 'wesjet/jetpack'
 import { Container } from '../../components/common/Container'
 import { defineStaticProps, toParams } from '../../utils/next'
 import { DocsNavigation } from 'src/components/docs/DocsNavigation'

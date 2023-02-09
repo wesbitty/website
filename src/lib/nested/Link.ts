@@ -1,4 +1,4 @@
-import { defineNestedType } from 'contentlayer/source-files'
+import { defineNestedType } from 'wesjet/maker'
 
 export const Link = defineNestedType(() => ({
   name: 'Link',

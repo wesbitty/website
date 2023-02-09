@@ -1,22 +1,22 @@
 ---
-title: next-contentlayer
+title: wesjet-nextjs-plugin
 excerpt: Helper for improving the experience when developing with Next.js.
 ---
 
 The Next.js plugin provides helpers for improving the developer experience in using Contentlayer with Next.js.
 
-## `withContentlayer`
+## `withWesjet`
 
-The `withContentlayer` utility automatically hooks Contentlayer into Next.js `build` and `dev` processes, which means you don't have to worry about working with the CLI when running or building your Next.js project.
+The `withWesjet` utility automatically hooks Contentlayer into Next.js `build` and `dev` processes, which means you don't have to worry about working with the CLI when running or building your Next.js project.
 
 To enable it, add the following to your `next.config.js` file:
 
 ```js
 // next.config.js
 
-import { withContentlayer } from 'next-contentlayer'
+import { withWesjet } from 'wesjet-nextjs-plugin'
 
-export default withContentlayer({})
+export default withWesjet({})
 ```
 
 ## `useMDXComponent`
@@ -26,8 +26,8 @@ If you're using MDX in your Next.js project, `useMDXComponent` makes it easy to 
 Here is an example of a layout that receives a `slug `parameter, then uses it to retrieve a document and render MDX on the page.
 
 ```jsx
-import { useMDXComponent } from 'next-contentlayer/hooks'
-import { allDocs } from 'contentlayer/generated'
+import { useMDXComponent } from 'wesjet-nextjs-plugin/hooks'
+import { allDocs } from 'wesjet/jetpack'
 import Button from '../components/Button'
 
 const mdxComponents = {
@@ -52,23 +52,23 @@ export const getStaticProps = ({ params: { slug } }) => {
 ```
 
 <Callout>
-  Remember to set `contentType: 'mdx'` in your config for proper [processing of MDX files](/docs/sources/files/mdx).
+  Remember to set `contentType: 'mdx'` in your config for proper [processing of MDX files](/docs/maker/files/mdx).
 </Callout>
 
 For a more holistic view of using MDX in a project, refer to [the example Next.js project](https://github.com/wesbitty/wesjet-starter).
 
-## `createContentlayerPlugin`
+## `createWesjetPlugin`
 
-The `createContentlayerPlugin` function allows you to add non-default configuration options to the next-contentlayer plugin. This is not a common use. See [`withContentlayer`](#withContentlayer) for typical use.
+The `createWesjetPlugin` function allows you to add non-default configuration options to the wesjet-nextjs-plugin plugin. This is not a common use. See [`withWesjet`](#withWesjet) for typical use.
 
 ```js
-import { createContentlayerPlugin } from 'next-contentlayer'
+import { createWesjetPlugin } from 'wesjet-nextjs-plugin'
 
-const withContentlayer = createContentlayerPlugin({
+const withWesjet = createWesjetPlugin({
   // Additional Contentlayer config options
 })
 
-export default withContentlayer({
+export default withWesjet({
   // Your Next.js config...
 })
 ```

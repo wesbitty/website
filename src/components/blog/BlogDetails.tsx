@@ -1,4 +1,4 @@
-import { Post } from 'contentlayer/generated'
+import { Post } from 'wesjet/jetpack'
 import { FC } from 'react'
 import Link from 'next/link'
 import { Icon } from 'src/components/common/Icon'

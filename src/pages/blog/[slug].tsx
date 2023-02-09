@@ -1,9 +1,9 @@
 import type { InferGetStaticPropsType } from 'next'
 // TODO remove eslint-disable when fixed https://github.com/import-js/eslint-plugin-import/issues/1810
 // eslint-disable-next-line import/no-unresolved
-import { useLiveReload, useMDXComponent } from 'next-contentlayer/hooks'
+import { useLiveReload, useMDXComponent } from 'wesjet-nextjs-plugin/hooks'
 import { FC, useEffect, useMemo, useState } from 'react'
-import { allPosts } from 'contentlayer/generated'
+import { allPosts } from 'wesjet/jetpack'
 import { Container } from '../../components/common/Container'
 import { defineStaticProps } from '../../utils/next'
 import { Callout } from '../../components/common/Callout'
@@ -150,10 +150,10 @@ const Post: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ post, betaSn
     () =>
       betaSnippets
         ? {
-            Remark: () => <CodeWindow snippets={betaSnippets.remark[colorScheme]} />,
-            ContentlayerConfig: () => <CodeWindow snippets={betaSnippets.contentlayer[colorScheme].howItWorksStep1} />,
-            ContentlayerNext: () => <CodeWindow snippets={betaSnippets.contentlayer[colorScheme].howItWorksStep3} />,
-          }
+          Remark: () => <CodeWindow snippets={betaSnippets.remark[colorScheme]} />,
+          ContentlayerConfig: () => <CodeWindow snippets={betaSnippets.contentlayer[colorScheme].howItWorksStep1} />,
+          ContentlayerNext: () => <CodeWindow snippets={betaSnippets.contentlayer[colorScheme].howItWorksStep3} />,
+        }
         : ({} as any),
     [betaSnippets, colorScheme],
   )

@@ -26,13 +26,13 @@ Generated JSON documents contain the data that was transformed from the content 
 They are placed in a type-specific directory within Contentlayer's data directory, following this pattern:
 
 ```txt
-.contentlayer/generated/[DOCTYPE]/[ID].json
+.wesjet/jetpack/[DOCTYPE]/[ID].json
 ```
 
 For example, if the document type was called `Page` and the ID of one object was `index.md`, then the path to that file would be:
 
 ```txt
-.contentlayer/generated/Page/index.md.json
+.wesjet/jetpack/Page/index.md.json
 ```
 
 ### Data Structure
@@ -97,18 +97,18 @@ The naming convention is to prepend the pluralized document type with "all". If 
 
 ### File Location
 
-The file is located in the main Contentlayer data directory and named according to its main export. In the example above where the document type name is `Page`, the file will live at `.contentlayer/generated/allPages.mjs`.
+The file is located in the main Contentlayer data directory and named according to its main export. In the example above where the document type name is `Page`, the file will live at `.wesjet/jetpack/allPages.mjs`.
 
 ## All Documents Manifest
 
 The main manifest file is responsible for exporting every document collection, as well as an `allDocuments` collection that is an array of every document across all document types.
 
-It it colocated with the collection manifest in the `.contentlayer/generated` directory as `index.mjs`.
+It it colocated with the collection manifest in the `.wesjet/jetpack` directory as `index.mjs`.
 
 Continuing the `Page` example, a simple version of the file may look like this:
 
 ```js
-export { isType } from 'contentlayer/client'
+export { isType } from 'wesjet/client'
 
 export * from './allPages.mjs'
 import { allPages } from './allPages.mjs'
@@ -118,7 +118,7 @@ export const allDocuments = [...allPages]
 
 ### `isType` Utility
 
-This file also exports an `isType` utility that could be conveniently imported from this file or directly from `contentlayer/client`.
+This file also exports an `isType` utility that could be conveniently imported from this file or directly from `wesjet/client`.
 
 This is most frequently used to determine if a particular document is of a particular type, taking into account your specific configuration.
 
@@ -131,7 +131,7 @@ allDocuments.filter((doc) => ['Page', 'Post'].includes(doc.type))
 You can do this instead:
 
 ```js
-import { isType, allDocuments } from 'contentlayer/generated'
+import { isType, allDocuments } from 'wesjet/jetpack'
 
 allDocuments.filter(isType(['Page', 'Post']))
 ```

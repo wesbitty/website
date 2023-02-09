@@ -25,8 +25,8 @@ defineDocumentType(() => ({
 
 ```tsx
 import React from 'react'
-import { allPosts, type Post } from 'contentlayer/generated'
-import { useMDXComponent } from 'next-contentlayer/hooks'
+import { allPosts, type Post } from 'wesjet/jetpack'
+import { useMDXComponent } from 'wesjet-nextjs-plugin/hooks'
 
 export const getStaticProps = () => {
   const post = allPosts[0]
@@ -54,7 +54,7 @@ export default Page
 You can add [remark](https://github.com/remarkjs/remark) and [rehype](https://github.com/rehypejs/rehype) plugins inside the `mdx` property when calling `makeSource` in your Contentlayer configuration.
 
 ```js
-import { makeSource } from 'contentlayer/source-files'
+import { makeSource } from 'wesjet/maker'
 import highlight from 'rehype-highlight'
 
 export default makeSource({

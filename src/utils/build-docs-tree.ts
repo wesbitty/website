@@ -1,5 +1,5 @@
 import { children } from 'cheerio/lib/api/traversing'
-import { Doc } from 'contentlayer/generated'
+import { Doc } from 'wesjet/jetpack'
 import { TreeNode } from 'types/TreeNode'
 
 export const buildDocsTree = (docs: Doc[], parentPathNames: string[] = []): TreeNode[] => {

@@ -12,7 +12,7 @@ The code calling `makeSource` should be placed in `contentlayer.config.js`.
 ```ts
 // contentlayer.config.js
 
-import { makeSource } from 'contentlayer/source-files'
+import { makeSource } from 'wesjet/maker'
 
 export default makeSource({
   /* options */
@@ -126,7 +126,7 @@ export default makeSource({
     Here's an example that adds syntax highlighting.
 
     ```js
-    import { makeSource } from 'contentlayer/source-files'
+    import { makeSource } from 'wesjet/maker'
     import highlight from 'rehype-highlight'
 
     export default makeSource({
@@ -151,7 +151,7 @@ export default makeSource({
     **Example:**
 
     ```js
-    import { makeSource } from 'contentlayer/source-files'
+    import { makeSource } from 'wesjet/maker'
     import highlight from 'rehype-highlight'
 
     export default makeSource({

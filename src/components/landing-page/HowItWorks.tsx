@@ -14,7 +14,7 @@ export const codeSnippets = {
       file: 'contentlayer.config.ts',
       lines: 16,
       content: `\
-import { defineDocumentType, makeSource } from 'contentlayer/source-files'
+import { defineDocumentType, makeSource } from 'wesjet/maker'
 
 const Post = defineDocumentType(() => ({
   name: 'Post',
@@ -138,7 +138,7 @@ export const localStep2DataTransformation = {
     type: 'fileTree',
     data: {
       type: 'folder',
-      name: '.contentlayer/generated/',
+      name: '.wesjet/jetpack/',
       children: [
         {
           type: 'folder',
@@ -220,7 +220,7 @@ const content = {
             <>
               <p>
                 Run Contentlayer to process your content. Do this as part of the Next.js dev server, or using the
-                Contentlayer CLI.
+                Wesjet CLI.
               </p>
               <p>
                 This validates the content, then generates types definitions and outputs data objects ready to be
@@ -286,9 +286,8 @@ export const HowItWorks: FC<{ codeSnippets: CodeSnippets }> = ({ codeSnippets })
                   key={index}
                   value={title.toLowerCase().replace(/ /g, '-')}
                   disabled={!active}
-                  className={`shrink-0 overflow-hidden whitespace-nowrap border font-semibold focus:outline-none focus:ring-2 focus:ring-violet-300 dark:focus:ring-violet-900 ${
-                    index == 0 ? 'rounded-l-md' : index == content.tabs.length - 1 ? 'rounded-r-md' : '-mx-px'
-                  } border-gray-200 bg-gray-50 py-2 px-4 text-slate-600
+                  className={`shrink-0 overflow-hidden whitespace-nowrap border font-semibold focus:outline-none focus:ring-2 focus:ring-violet-300 dark:focus:ring-violet-900 ${index == 0 ? 'rounded-l-md' : index == content.tabs.length - 1 ? 'rounded-r-md' : '-mx-px'
+                    } border-gray-200 bg-gray-50 py-2 px-4 text-slate-600
               hover:bg-gray-100 radix-state-active:z-20 radix-state-active:border-violet-300 radix-state-active:bg-violet-100 radix-state-active:text-violet-600
               dark:border-gray-800 dark:bg-gray-900 dark:text-slate-300 dark:hover:bg-gray-800 dark:radix-state-active:border-violet-900 dark:radix-state-active:bg-violet-600/20 dark:radix-state-active:text-violet-500`}
                 >
@@ -297,9 +296,8 @@ export const HowItWorks: FC<{ codeSnippets: CodeSnippets }> = ({ codeSnippets })
               ) : (
                 <Tooltip.Root key={index} delayDuration={100}>
                   <Tooltip.Trigger
-                    className={`cursor-default border font-semibold ${
-                      index == 0 ? 'rounded-l-md' : index == content.tabs.length - 1 ? 'rounded-r-md' : '-mx-px'
-                    } border-gray-200 bg-gray-50 py-2 px-4 text-slate-400 dark:border-gray-800 dark:bg-gray-900 dark:text-slate-500`}
+                    className={`cursor-default border font-semibold ${index == 0 ? 'rounded-l-md' : index == content.tabs.length - 1 ? 'rounded-r-md' : '-mx-px'
+                      } border-gray-200 bg-gray-50 py-2 px-4 text-slate-400 dark:border-gray-800 dark:bg-gray-900 dark:text-slate-500`}
                   >
                     {title}
                   </Tooltip.Trigger>

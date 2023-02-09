@@ -1,7 +1,7 @@
 // @ts-check
-const { withContentlayer } = require('next-contentlayer')
+const { withWesjet } = require('wesjet-nextjs-plugin')
 
-module.exports = withContentlayer({
+module.exports = withWesjet({
   images: {
     domains: ['pbs.twimg.com', 'avatars.githubusercontent.com', 'i.imgur.com'],
   },

@@ -1,4 +1,4 @@
-import { Post } from 'contentlayer/generated'
+import { Post } from 'wesjet/jetpack'
 import { BlogDetails } from 'src/components/blog/BlogDetails'
 import { Heading } from '../../components/landing-page/Heading'
 import { Paragraph } from '../../components/landing-page/Paragraph'

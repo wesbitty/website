@@ -1,4 +1,4 @@
-import { defineDocumentType, defineNestedType } from 'contentlayer/source-files'
+import { defineDocumentType, defineNestedType } from 'wesjet/maker'
 import type * as unified from 'unified'
 import { mdxToMarkdown } from 'mdast-util-mdx'
 import { toMarkdown } from 'mdast-util-to-markdown'
@@ -107,20 +107,20 @@ export const Post = defineDocumentType(() => ({
 
 const tocPlugin =
   (headings: PostHeading[]): unified.Plugin =>
-  () => {
-    return (node: any) => {
-      node.children
-        .filter((_: any) => _.type === 'heading')
-        .forEach((heading: any) => {
-          const title = toMarkdown({ type: 'paragraph', children: heading.children }, { extensions: [mdxToMarkdown()] })
-            .trim()
-            // removes MDX in headlines
-            .replace(/<.*$/g, '')
-            // remove backslashes (e.g. from list items)
-            .replace(/\\/g, '')
-            .trim()
+    () => {
+      return (node: any) => {
+        node.children
+          .filter((_: any) => _.type === 'heading')
+          .forEach((heading: any) => {
+            const title = toMarkdown({ type: 'paragraph', children: heading.children }, { extensions: [mdxToMarkdown()] })
+              .trim()
+              // removes MDX in headlines
+              .replace(/<.*$/g, '')
+              // remove backslashes (e.g. from list items)
+              .replace(/\\/g, '')
+              .trim()
 
-          return headings.push({ level: heading.depth, title })
-        })
+            return headings.push({ level: heading.depth, title })
+          })
+      }
     }
-  }

@@ -35,14 +35,14 @@ const content: Content = {
     {
       label: 'How content is transformed into data',
       ideState: {
-        openFiles: ['posts/change-me.md', '.contentlayer/generated/Post/change-me.md.json'],
+        openFiles: ['posts/change-me.md', '.wesjet/jetpack/Post/change-me.md.json'],
         focusIndex: 1,
         url: '/',
         view: 'editor',
       },
       hints: {
         editor: 'Each content file (e.g. MDX) is transformed into a JSON document ...',
-        preview: '... which are stored in the .contentlayer/generated folder',
+        preview: '... which are stored in the .wesjet/jetpack folder',
         console: 'Contentlayer runs as part of the Next.js dev server',
       },
     },
@@ -206,7 +206,7 @@ const StackblitzIDE: React.FC<
     const check = async () => {
       const files = await vm.getFsSnapshot()
       const fileNames = Object.keys(files ?? {})
-      if (fileNames.includes('.contentlayer/generated/Post/change-me.md.json')) {
+      if (fileNames.includes('.wesjet/jetpack/Post/change-me.md.json')) {
         setEditorIsReady(true)
       } else {
         timeout = window.setTimeout(check, 50)

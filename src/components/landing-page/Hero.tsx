@@ -34,7 +34,7 @@ const content = {
   ),
   features: ['Lightweight & easy to use', 'Great developer experience', 'Blazing fast build & page performance'],
   primaryAction: { label: 'Get started', url: '/docs/getting-started' },
-  secondaryAction: { label: 'Why Contentlayer?', url: '/blog/working-with-content-is-hard-for-developers' },
+  secondaryAction: { label: 'Why Wesjet?', url: '/blog/working-with-content-is-hard-for-developers' },
   video: {
     thumbnail: { url: 'https://i.imgur.com/5IKJALH.png', alt: 'Intro to Contentlayer Video Thumbnail' },
     youtubeId: '58Pj4a4Us7A',

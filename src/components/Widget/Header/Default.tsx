@@ -1,12 +1,12 @@
 import Link from 'next/link'
 import { FC, useState } from 'react'
 import { useKBar } from 'kbar'
-import { Icon, IconName } from '../Icon'
-import { Label } from './Label'
-import { Logo } from './Logo'
+import { Icon, IconName } from '../../Icon'
+import { Label } from '../../common/Label'
+import { Logo } from '../../common/Logo'
 import { useRouter } from 'next/router'
-import { ColorSchemeSwitcher } from './ColorSchemeSwitcher'
-import { isExternalUrl } from '../../utils/helpers'
+import { ColorSchemeSwitcher } from '../../common/ColorSchemeSwitcher'
+import { isExternalUrl } from '../../../utils/helpers'
 
 const navLinks: Array<{ label: string; url: string }> = [
   { label: 'Blog', url: '/blog' },
@@ -32,8 +32,8 @@ const NavLink: FC<{ label?: string; hideLabel?: boolean; icon?: IconName; url: s
     <Link href={url}>
       <a
         className={`group flex h-8 items-center rounded-md bg-transparent px-3 text-sm font-medium leading-none ${active
-            ? 'bg-violet-50 text-violet-900 dark:bg-violet-500/20 dark:text-violet-50'
-            : 'text-slate-600 hover:bg-gray-50 hover:text-slate-700 dark:text-slate-300 dark:hover:bg-gray-900 dark:hover:text-slate-200'
+          ? 'bg-violet-50 text-violet-900 dark:bg-violet-500/20 dark:text-violet-50'
+          : 'text-slate-600 hover:bg-gray-50 hover:text-slate-700 dark:text-slate-300 dark:hover:bg-gray-900 dark:hover:text-slate-200'
           }`}
         target={isExternalUrl(url) ? '_blank' : undefined}
         rel={isExternalUrl(url) ? 'noreferrer' : undefined}
@@ -67,7 +67,9 @@ export const SearchButton: FC<{ showShortcut?: boolean }> = ({ showShortcut = tr
   )
 }
 
-export const MainNavigation = () => {
+
+
+export const DefaultHeaderWidget = () => {
   const [open, setOpen] = useState(false)
 
   return (
@@ -76,8 +78,11 @@ export const MainNavigation = () => {
         <div className="flex items-center space-x-2.5">
           <Link href="/">
             <a className="flex items-center space-x-2.5 font-bold text-slate-800 no-underline dark:text-white">
-              <Logo />
-              <span className="-mt-0.5">Wesbitty Inc</span>
+            <img
+            className="w-40 mx-auto"
+            src="/logo/wesbitty-light-logo.svg"
+            alt="Wesbitty Inc Logo"
+            />
             </a>
           </Link>
           <Label text="Development" />

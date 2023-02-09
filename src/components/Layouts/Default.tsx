@@ -2,8 +2,7 @@ import { FC } from 'react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { SearchProvider } from '../SearchContext'
-import { MainNavigation } from '../common/MainNavigation'
-import { Footer } from '../Widget'
+import { DefaultHeaderWidget, DefaultFooterWidget } from '../Widget'
 
 export const DefaultLayout: FC<any> = ({ children, ...customMeta }) => {
   const router = useRouter()
@@ -47,12 +46,12 @@ export const DefaultLayout: FC<any> = ({ children, ...customMeta }) => {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </Head>
       <SearchProvider>
-        <MainNavigation />
+        <DefaultHeaderWidget />
         <div className="flex min-h-screen flex-col justify-between">
           <main className="relative pt-16" style={{ scrollPaddingTop: '150px' }}>
             {children}
           </main>
-          <Footer />
+          <DefaultFooterWidget />
         </div>
       </SearchProvider>
     </>

@@ -1,7 +1,8 @@
 // Header Widget
+export { DefaultHeaderWidget } from './Header/Default'
 
 // Footer Widget
-export { Footer } from './Footer'
+export { DefaultFooterWidget } from './Footer'
 
 // Default Widget
 

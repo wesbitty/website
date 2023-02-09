@@ -22,7 +22,7 @@ const content: Content = {
     {
       label: "Let's edit some content",
       ideState: {
-        openFiles: ['posts/change-me.md'],
+        openFiles: ['posts/documentation.md'],
         url: '/',
         view: 'default',
       },
@@ -35,7 +35,7 @@ const content: Content = {
     {
       label: 'How content is transformed into data',
       ideState: {
-        openFiles: ['posts/change-me.md', '.wesjet/jetpack/Post/change-me.md.json'],
+        openFiles: ['posts/documentation.md', '.wesjet/jetpack/Post/documentation.md.json'],
         focusIndex: 1,
         url: '/',
         view: 'editor',
@@ -50,7 +50,7 @@ const content: Content = {
       label: 'How data is used from your app',
       ideState: {
         openFiles: ['pages/posts/[slug].tsx'],
-        url: '/posts/change-me',
+        url: '/posts/documentation',
         view: 'default',
       },
       hints: {
@@ -62,7 +62,7 @@ const content: Content = {
     {
       label: 'Project setup',
       ideState: {
-        openFiles: ['contentlayer.config.ts', 'next.config.js'],
+        openFiles: ['wesjet.config.ts', 'next.config.js'],
         url: '/',
         view: 'editor',
       },
@@ -79,7 +79,7 @@ export const Playground: FC = () => {
   const [selectedStep, setSelectedStep] = useState(0)
 
   const [stackblitzIDEState, setStackblitzIDEState] = useState<StackblitzIDEState>({
-    openFiles: ['posts/change-me.md'],
+    openFiles: ['posts/documentation.md'],
     url: '',
     view: 'default',
   })
@@ -206,7 +206,7 @@ const StackblitzIDE: React.FC<
     const check = async () => {
       const files = await vm.getFsSnapshot()
       const fileNames = Object.keys(files ?? {})
-      if (fileNames.includes('.wesjet/jetpack/Post/change-me.md.json')) {
+      if (fileNames.includes('.wesjet/jetpack/Post/documentation.md.json')) {
         setEditorIsReady(true)
       } else {
         timeout = window.setTimeout(check, 50)

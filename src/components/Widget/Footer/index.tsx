@@ -3,7 +3,7 @@ import FooterLinks from '../../../[wesbitty]/data/Footer.json'
 import Link from 'next/link'
 import { iMode } from '../../ColorScheme/ColorSchemeProvider'
 
-export const Footer = () => {
+export const DefaultFooterWidget = () => {
   const router = useRouter()
   const { basePath } = useRouter()
   const currentPath = router.pathname

@@ -11,7 +11,7 @@ import { Paragraph } from './Paragraph'
 export const codeSnippets = {
   howItWorksStep1: [
     {
-      file: 'contentlayer.config.ts',
+      file: 'wesjet.config.ts',
       lines: 16,
       content: `\
 import { defineDocumentType, makeSource } from 'wesjet/maker'
@@ -103,19 +103,19 @@ export const localStep2DataTransformation = {
       children: [
         {
           type: 'file',
-          name: 'change-me.md',
+          name: 'documentation.md',
           comment: '',
           tooltip: 'Source file with post content and frontmatter fields.',
         },
         {
           type: 'file',
-          name: 'click-me.md',
+          name: 'getting-started.md',
           comment: '',
           tooltip: 'Source file with post content and frontmatter fields.',
         },
         {
           type: 'file',
-          name: 'what-is-contentlayer.md',
+          name: 'what-is-wesjet.md',
           comment: '',
           tooltip: 'Source file with post content and frontmatter fields.',
         },
@@ -149,19 +149,19 @@ export const localStep2DataTransformation = {
             // { type: 'file', name: '_index.mjs', comment: '', tooltip: 'Tooltip content' },
             {
               type: 'file',
-              name: 'change-me.md.json',
+              name: 'documentation.md.json',
               comment: '',
               tooltip: 'Transformed data object representing the post content.',
             },
             {
               type: 'file',
-              name: 'click-me.md.json',
+              name: 'getting-started.md.json',
               comment: '',
               tooltip: 'Transformed data object representing the post content.',
             },
             {
               type: 'file',
-              name: 'what-is-contentlayer.md.json',
+              name: 'what-is-wesjet.md.json',
               comment: '',
               tooltip: 'Transformed data object representing the post content.',
             },

@@ -25,10 +25,7 @@ const content = {
         tooltip="A content SDK simplifies working with structured content as data in your site/application"
       />{' '}
       that validates and transforms your content into{' '}
-      <Dashed
-        label="type-safe"
-        tooltip="Wesjet compiles TypeScript types based on your content document definitions"
-      />{' '}
+      <Dashed label="type-safe" tooltip="Wesjet compiles TypeScript types based on your content document definitions" />{' '}
       JSON data you can easily import into your application.
     </>
   ),
@@ -42,7 +39,6 @@ const content = {
 }
 
 export const Hero: FC = () => {
-  
   const router = useRouter()
 
   return (

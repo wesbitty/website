@@ -31,10 +31,11 @@ const NavLink: FC<{ label?: string; hideLabel?: boolean; icon?: IconName; url: s
   return (
     <Link href={url}>
       <a
-        className={`group flex h-8 items-center rounded-md bg-transparent px-3 text-sm font-medium leading-none ${active
-          ? 'bg-violet-50 text-violet-900 dark:bg-violet-500/20 dark:text-violet-50'
-          : 'text-slate-600 hover:bg-gray-50 hover:text-slate-700 dark:text-slate-300 dark:hover:bg-gray-900 dark:hover:text-slate-200'
-          }`}
+        className={`group flex h-8 items-center rounded-md bg-transparent px-3 text-sm font-medium leading-none ${
+          active
+            ? 'bg-violet-50 text-violet-900 dark:bg-violet-500/20 dark:text-violet-50'
+            : 'text-slate-600 hover:bg-gray-50 hover:text-slate-700 dark:text-slate-300 dark:hover:bg-gray-900 dark:hover:text-slate-200'
+        }`}
         target={isExternalUrl(url) ? '_blank' : undefined}
         rel={isExternalUrl(url) ? 'noreferrer' : undefined}
       >
@@ -67,8 +68,6 @@ export const SearchButton: FC<{ showShortcut?: boolean }> = ({ showShortcut = tr
   )
 }
 
-
-
 export const DefaultHeaderWidget = () => {
   const [open, setOpen] = useState(false)
 
@@ -78,11 +77,7 @@ export const DefaultHeaderWidget = () => {
         <div className="flex items-center space-x-2.5">
           <Link href="/">
             <a className="flex items-center space-x-2.5 font-bold text-slate-800 no-underline dark:text-white">
-            <img
-            className="w-40 mx-auto"
-            src="/logo/wesbitty-light-logo.svg"
-            alt="Wesbitty Inc Logo"
-            />
+              <img className="mx-auto w-40" src="/logo/wesbitty-light-logo.svg" alt="Wesbitty Inc Logo" />
             </a>
           </Link>
           <Label text="Development" />

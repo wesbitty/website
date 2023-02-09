@@ -45,10 +45,11 @@ export const ColorSchemeSwitcher = () => {
       <DropdownMenu.Content className="rounded-md border border-gray-100 bg-gray-50 p-2 dark:border-gray-800 dark:bg-gray-900">
         <DropdownMenu.Item
           onSelect={() => updateColorScheme('light')}
-          className={`group flex h-8 cursor-pointer items-center space-x-4 rounded-md px-3 text-sm font-medium leading-none hover:outline-none ${preferredColorScheme == 'light'
+          className={`group flex h-8 cursor-pointer items-center space-x-4 rounded-md px-3 text-sm font-medium leading-none hover:outline-none ${
+            preferredColorScheme == 'light'
               ? 'bg-violet-50 text-violet-900 dark:bg-violet-500/20 dark:text-violet-50'
               : 'text-slate-500 hover:bg-gray-50 hover:text-slate-600 dark:text-slate-400 dark:hover:bg-gray-900 dark:hover:text-slate-300'
-            }`}
+          }`}
         >
           <span className="block w-4">
             <Icon name="sun" />
@@ -57,10 +58,11 @@ export const ColorSchemeSwitcher = () => {
         </DropdownMenu.Item>
         <DropdownMenu.Item
           onSelect={() => updateColorScheme('dark')}
-          className={`group flex h-8 cursor-pointer items-center space-x-4 rounded-md bg-transparent px-3 text-sm font-medium leading-none hover:outline-none ${preferredColorScheme == 'dark'
+          className={`group flex h-8 cursor-pointer items-center space-x-4 rounded-md bg-transparent px-3 text-sm font-medium leading-none hover:outline-none ${
+            preferredColorScheme == 'dark'
               ? 'bg-violet-50 text-violet-900 dark:bg-violet-500/20 dark:text-violet-50'
               : 'text-slate-500 hover:bg-gray-50 hover:text-slate-600 dark:text-slate-400 dark:hover:bg-gray-900 dark:hover:text-slate-300'
-            }`}
+          }`}
         >
           <span className="block w-4">
             <Icon name="moon" />
@@ -69,10 +71,11 @@ export const ColorSchemeSwitcher = () => {
         </DropdownMenu.Item>
         <DropdownMenu.Item
           onSelect={() => updateColorScheme('system')}
-          className={`group flex h-8 cursor-pointer items-center space-x-4 rounded-md bg-transparent px-3 text-sm font-medium leading-none hover:outline-none ${preferredColorScheme == 'system'
+          className={`group flex h-8 cursor-pointer items-center space-x-4 rounded-md bg-transparent px-3 text-sm font-medium leading-none hover:outline-none ${
+            preferredColorScheme == 'system'
               ? 'bg-violet-50 text-violet-900 dark:bg-violet-500/20 dark:text-violet-50'
               : 'text-slate-500 hover:bg-gray-50 hover:text-slate-600 dark:text-slate-400 dark:hover:bg-gray-900 dark:hover:text-slate-300'
-            }`}
+          }`}
         >
           <span className="block w-4">
             <Icon name="gear" />

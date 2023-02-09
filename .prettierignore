@@ -1,0 +1,6 @@
+node_modules
+.wesjet
+.yarn
+.next
+package-lock.json
+yarn.lock

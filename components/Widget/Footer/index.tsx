@@ -13,13 +13,13 @@ export const DefaultFooterWidget = () => {
 
   return (
     <footer
-      className="bg-white dark:bg-dark-800 border-t border-gray-100 dark:border-gray-600"
+      className="dark:bg-dark-800 border-t border-gray-100 bg-white dark:border-gray-600"
       aria-labelledby="footerHeading"
     >
       <h2 id="footerHeading" className="sr-only">
         Footer
       </h2>
-      <div className="sm:pt-6 container relative mx-auto px-6 pt-6 md:pt-10 lg:px-8 lg:pt-8 xl:px-8">
+      <div className="container relative mx-auto px-6 pt-6 sm:pt-6 md:pt-10 lg:px-8 lg:pt-8 xl:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-2">
           <div className="space-y-2 xl:col-span-1">
             <Link href="/" as="/">
@@ -27,9 +27,7 @@ export const DefaultFooterWidget = () => {
                 <img
                   className="w-40"
                   src={
-                    ThemeMode
-                      ? `${basePath}/logo/wesbitty-light-logo.svg`
-                      : `${basePath}/logo/wesbitty-dark-logo.svg`
+                    ThemeMode ? `${basePath}/logo/wesbitty-light-logo.svg` : `${basePath}/logo/wesbitty-dark-logo.svg`
                   }
                   alt="Wesbitty"
                 />
@@ -66,14 +64,12 @@ export const DefaultFooterWidget = () => {
               </a>
             </div>
           </div>
-          <div className="mt-2 grid grid-cols-1 gap-4 xl:mt-0 xl:col-span-2">
+          <div className="mt-2 grid grid-cols-1 gap-4 xl:col-span-2 xl:mt-0">
             <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
               {FooterLinks.map((item) => {
                 return (
                   <div key={`footer_${item.title}`}>
-                    <h3 className="text-base pt-8 text-gray-500 dark:text-dark-100">
-                      {item.title}
-                    </h3>
+                    <h3 className="dark:text-dark-100 pt-8 text-base text-gray-500">{item.title}</h3>
                     <ul className="mt-4 space-y-2">
                       {item.elements.map((item: any, idx: number) => (
                         <li key={`${item.title}_item_${idx}`}>
@@ -81,16 +77,14 @@ export const DefaultFooterWidget = () => {
                             <a
                               className={`text-sm ${
                                 item.url === currentPath
-                                  ? 'text-gray-500 dark:text-dark-100'
-                                  : 'text-gray-400 dark:text-dark-200'
+                                  ? 'dark:text-dark-100 text-gray-500'
+                                  : 'dark:text-dark-200 text-gray-400'
                               } hover:text-gray-900 dark:hover:text-gray-300`}
                               aria-current={item.url === currentPath ? 'page' : undefined}
                             >
                               {item.text}
                               {!item.url && (
-                                <span className="block text-sm text-gray-300 dark:text-dark-300">
-                                  Coming Soon
-                                </span>
+                                <span className="dark:text-dark-300 block text-sm text-gray-300">Coming Soon</span>
                               )}
                             </a>
                           </Link>
@@ -105,8 +99,8 @@ export const DefaultFooterWidget = () => {
         </div>
       </div>
 
-      <div className="mt-12 border-t dark:border-dark flex justify-center">
-        <p className="mb-0 self-center text-base py-4 text-gray-500 dark:text-dark-100">
+      <div className="dark:border-dark mt-12 flex justify-center border-t">
+        <p className="dark:text-dark-100 mb-0 self-center py-4 text-base text-gray-500">
           &copy; <span>{currentYear}</span> Wesbitty, Inc.
         </p>
       </div>

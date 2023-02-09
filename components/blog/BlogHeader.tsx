@@ -34,8 +34,9 @@ export const BlogHeader: FC<{ post: Post }> = ({ post }) => {
         </div>
       </div>
       <div
-        className={`fixed inset-x-0 top-16 z-10 hidden h-16 w-screen border-b border-gray-200 bg-white bg-opacity-90 backdrop-blur backdrop-filter transition-opacity duration-200 dark:border-gray-800 dark:bg-gray-950 lg:block ${top ? 'opacity-0' : 'opacity-100'
-          }`}
+        className={`fixed inset-x-0 top-16 z-10 hidden h-16 w-screen border-b border-gray-200 bg-white bg-opacity-90 backdrop-blur backdrop-filter transition-opacity duration-200 dark:border-gray-800 dark:bg-gray-950 lg:block ${
+          top ? 'opacity-0' : 'opacity-100'
+        }`}
       >
         <div className="mx-auto h-full lg:max-w-[994px] lg:px-16">
           <div className="flex h-full items-center space-x-2 text-sm">

@@ -27,7 +27,6 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = defineStaticProps(async (context) => {
-
   const params = context.params as any
 
   const pagePath = params.slug?.join('/') ?? ''
@@ -61,7 +60,6 @@ export const getStaticProps = defineStaticProps(async (context) => {
   return { props: { doc, tree, breadcrumbs, childrenTree } }
 })
 
-
 const mdxComponents = {
   Callout,
   Card,
@@ -78,12 +76,15 @@ const mdxComponents = {
   OptionDescription,
 }
 
-
-const DevelopingPage: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ doc, tree, breadcrumbs, childrenTree }) => {
-
+const DevelopingPage: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
+  doc,
+  tree,
+  breadcrumbs,
+  childrenTree,
+}) => {
   const router = useRouter()
   useLiveReload()
-  
+
   const MDXContent = useMDXComponent(doc.body.code || '')
 
   return (

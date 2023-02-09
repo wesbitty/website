@@ -43,7 +43,7 @@ export const CodeWindow: FC<{
               <ScrollArea.Root className="w-full overflow-hidden bg-white dark:bg-[#0D1116]">
                 <ScrollArea.Viewport>
                   <div
-                    className={`text-[13] not-prose ${
+                    className={`not-prose text-[13] ${
                       router.pathname.split('/')[1] == 'blog' ? '-mt-[30px]' : '-mt-[20px]'
                     } -mb-[40px]`}
                     dangerouslySetInnerHTML={{ __html: content }}

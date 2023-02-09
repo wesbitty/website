@@ -33,7 +33,6 @@ import { BlogDetails } from '../../components/blog/BlogDetails'
 import { Author } from '../../components/common/Author'
 import { Dashed } from '../../components/landing-page/Dashed'
 
-
 export const getStaticPaths = async () => {
   const paths = allPosts.map(({ slug }) => {
     return { params: { slug } }
@@ -76,7 +75,6 @@ export const getStaticProps = defineStaticProps(async (context) => {
 
   return { props: { post, betaSnippets } }
 })
-
 
 const Image: FC<{ src: string; alt?: string; width?: number; height?: number; className?: string }> = ({
   src,
@@ -134,7 +132,6 @@ const mdxComponents = {
   Dashed,
 }
 
-
 const Post: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ post, betaSnippets }) => {
   useLiveReload()
 
@@ -151,21 +148,19 @@ const Post: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ post, betaSn
     }
   }, [preferredColorScheme])
 
-
   const BetaCodeWindow = useMemo(
     () =>
       betaSnippets
         ? {
-          Remark: () => <CodeWindow snippets={betaSnippets.remark[colorScheme]} />,
+            Remark: () => <CodeWindow snippets={betaSnippets.remark[colorScheme]} />,
 
-          WesjetConfig: () => <CodeWindow snippets={betaSnippets.wesjet[colorScheme].howItWorksStep1} />,
+            WesjetConfig: () => <CodeWindow snippets={betaSnippets.wesjet[colorScheme].howItWorksStep1} />,
 
-          WesjetNext: () => <CodeWindow snippets={betaSnippets.wesjet[colorScheme].howItWorksStep3} />,
-        }
+            WesjetNext: () => <CodeWindow snippets={betaSnippets.wesjet[colorScheme].howItWorksStep3} />,
+          }
         : ({} as any),
     [betaSnippets, colorScheme],
   )
-
 
   return (
     <DefaultLayout

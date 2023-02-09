@@ -10,4 +10,3 @@ export declare const globalConfig: GlobalConfig
 export declare const allPosts: Post[]
 
 export declare const allDocuments: DocumentTypes[]
-

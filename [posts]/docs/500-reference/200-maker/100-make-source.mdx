@@ -1,9 +1,9 @@
 ---
 title: makeSource
-excerpt: makeSource provides Contentlayer with the schema and configuration when using local files as the content source.
+excerpt: makeSource provides Wesjet with the schema and configuration when using local files as the content source.
 ---
 
-`makeSource` provides Contentlayer with the schema and configuration for your application.
+`makeSource` provides Wesjet with the schema and configuration for your application.
 
 ## Usage
 
@@ -46,7 +46,7 @@ export default makeSource({
 
   </OptionTitle>
   <OptionDescription>
-    An array of paths that Contentlayer should include, with the following conditions:
+    An array of paths that Wesjet should include, with the following conditions:
 
     - They can be either files or directories.
     - The paths need to be relative to `contentDirPath` or absolute.
@@ -75,7 +75,7 @@ export default makeSource({
 
   </OptionTitle>
   <OptionDescription>
-    An array of paths that Contentlayer should explicitly exclude, with the following conditions:
+    An array of paths that Wesjet should explicitly exclude, with the following conditions:
 
     - **Setting this option completely overrides the defaults.**
     - They can be either files or directories.
@@ -85,7 +85,7 @@ export default makeSource({
 
     This is useful when you want to ignore a specific file or directory within your main content directory.
 
-    **Default:** `['node_modules', '.git', '.yarn', '.cache', '.next', '.contentlayer', 'package.json', 'tsconfig.json']`
+    **Default:** `['node_modules', '.git', '.yarn', '.cache', '.next', '.wesjet', 'package.json', 'tsconfig.json']`
 
     **Example:**
 

@@ -1,10 +1,10 @@
 ---
 title: Remote Files
 label: Experimental
-excerpt: How to use Contentlayer with remote files as content source (e.g. Git repo)
+excerpt: How to use Wesjet with remote files as content source (e.g. Git repo)
 ---
 
-The remote files source acts very similarly to the [files source](/docs/maker/files) with the difference that the content files can live outside the website folder. Using the remote files source Contentlayer will automatically **sync the content files from your remote files source to your local website folder** and then process them using the regular files source.
+The remote files source acts very similarly to the [files source](/docs/maker/files) with the difference that the content files can live outside the website folder. Using the remote files source Wesjet will automatically **sync the content files from your remote files source to your local website folder** and then process them using the regular files source.
 
 Common remote file sources incl other Git repositories, databases, APIs or anywhere else where your content comes from.
 
@@ -16,7 +16,7 @@ See [full example here](https://github.com/wesbitty/wesbitty/tree/main/examples/
 // NOTE we're using the `defineDocumentType` from the regular files source
 import { defineDocumentType } from 'wesjet/maker'
 import { spawn } from 'node:child_process'
-import { makeSource } from 'contentlayer/source-remote-files'
+import { makeSource } from 'wesjet/source-remote-files'
 
 const Post = defineDocumentType(() => ({
   name: 'Post',

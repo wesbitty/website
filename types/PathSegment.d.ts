@@ -1,1 +1,4 @@
-type PathSegment = { order: number; pathName: string }
+type PathSegment = { 
+    order: number; 
+    pathName: string 
+}

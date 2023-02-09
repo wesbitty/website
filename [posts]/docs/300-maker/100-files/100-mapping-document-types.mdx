@@ -1,10 +1,10 @@
 ---
 title: Mapping Documents to Document Types
 nav_title: Mapping Documents to Types
-excerpt: How Contentlayer determines and sets the type for each document.
+excerpt: How Wesjet determines and sets the type for each document.
 ---
 
-Contentlayer resolves the _type_ of each document in this order:
+Wesjet resolves the _type_ of each document in this order:
 
 1. Explicit `type` field on the document.
 1. Matching the `filePathPattern` for the document type.
@@ -66,7 +66,7 @@ type: Page
 
 Note that regardless of whether or not you are explicitly defining the type on individual documents, you should still stay true to the `filePathPattern` option for that document type's definition.
 
-Following the example above, if you've specified the `filePathPattern` as `posts/**/*.mdx` and the type as `Post`, you don't want to place a document of type `Post` in a directory outside `posts` or without an `.mdx` file extension. If you do, Contentlayer may process the file.
+Following the example above, if you've specified the `filePathPattern` as `posts/**/*.mdx` and the type as `Post`, you don't want to place a document of type `Post` in a directory outside `posts` or without an `.mdx` file extension. If you do, Wesjet may process the file.
 
 ```txt
 /
@@ -92,7 +92,7 @@ const Post = defineDocumentType(() => ({
 }))
 ```
 
-Then Contentlayer's interpretation would look like this:
+Then Wesjet's interpretation would look like this:
 
 ```txt
 /

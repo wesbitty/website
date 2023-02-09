@@ -4,7 +4,7 @@ nav_title: Images
 excerpt: Options on image processing when using local files as your content source.
 ---
 
-Contentlayer does not currently support image processing, though we're [planning on implementing it](https://github.com/wesbitty/wesbitty/issues/11). Until then, there are a few different approaches you can take to working with images when your content is processed by Contentlayer:
+Wesjet does not currently support image processing, though we're [planning on implementing it](https://github.com/wesbitty/wesbitty/issues/11). Until then, there are a few different approaches you can take to working with images when your content is processed by Wesjet:
 
 - [Framework Tooling](#lean-on-the-framework) (recommendation)
 - [Raw Local Files](#using-unprocessed-images)
@@ -41,7 +41,7 @@ In the frontmatter of your content files, you'd store a reference to an image:
 ```yaml
 ---
 title: Why Wesjet is Awesome
-image: /images/why-contentlayer.png
+image: /images/why-wesjet.png
 # ...
 ---
 ```
@@ -62,16 +62,16 @@ These services deliver an optimized image, but it's still up to you to ensure th
 
 For the time being, unless the framework you're using supports processing images, manually processing is the best way to ensure page speed.
 
-To handle processing manually, you must decide if you want to do the processing _during_ the Contentlayer build or _after_.
+To handle processing manually, you must decide if you want to do the processing _during_ the Wesjet build or _after_.
 
 ### Processing Images as Computed Fields
 
-To process images during the Contentlayer build, you can use a computed field. Say you're storing the images locally. You could have a field called `imageSrc` that points to the location of the image.
+To process images during the Wesjet build, you can use a computed field. Say you're storing the images locally. You could have a field called `imageSrc` that points to the location of the image.
 
 ```yaml
 ---
 title: Why Wesjet is Awesome
-imageSrc: /images/why-contentlayer.png
+imageSrc: /images/why-wesjet.png
 # ...
 ---
 ```
@@ -92,7 +92,7 @@ defineDocumentType(() => ({
 }))
 ```
 
-Note that if you don't also specify the `imageSrc` as a field, you'll run into a warning from Contentlayer. To avoid that, you can tell Contentlayer to ignore extra fields.
+Note that if you don't also specify the `imageSrc` as a field, you'll run into a warning from Wesjet. To avoid that, you can tell Wesjet to ignore extra fields.
 
 ```js
 export default makeSource({
@@ -101,10 +101,10 @@ export default makeSource({
 })
 ```
 
-### Processing after the Contentlayer Build
+### Processing after the Wesjet Build
 
-Another option is to build a utility method within your application that does the processing. In this case, Contentlayer would have already processed the image reference as a string, which you would send to the processing utility before building the props to send to the page.
+Another option is to build a utility method within your application that does the processing. In this case, Wesjet would have already processed the image reference as a string, which you would send to the processing utility before building the props to send to the page.
 
-### Handling Images in Markdown with Contentlayer
+### Handling Images in Markdown with Wesjet
 
 It's worth noting that the methods above handle processing images only that were specified in the frontmatter. If you want to process images you've used within the body of a markdown or MDX file, you'll want to build (or find) a remark or rehype plugin.

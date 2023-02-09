@@ -1,15 +1,15 @@
 ---
 title: Getting Started
-excerpt: Get comfortable with the basics of Contentlayer by showing how we can quickly build a blog site using Next.js.
+excerpt: Get comfortable with the basics of Wesjet by showing how we can quickly build a blog site using Next.js.
 ---
 
-This tutorial will get you comfortable with the basics of Contentlayer by walking through how to to build a simple blog site using Next.js.
+This tutorial will get you comfortable with the basics of Wesjet by walking through how to to build a simple blog site using Next.js.
 
 The blog will include a list of posts with a title, body, and date, rendered with the most recent on top. And each post will have its own page.
 
 <div className="mt-8 grid gap-6 md:grid-cols-2">
   <Card title="Try it Now" icon="gitpod" link={{url: 'http://gitpod.io/#https://github.com/wesbitty/wesjet-starter', label: 'Try in Gitpod'}}>
-    If you'd like to dive right in and start playing with Contentlayer, you can open the project in Gitpod.
+    If you'd like to dive right in and start playing with Wesjet, you can open the project in Gitpod.
 
   </Card>
   <Card title="Example Project" icon="github" link={{url: 'https://github.com/wesbitty/wesjet-starter', label: 'See example'}}>
@@ -29,28 +29,28 @@ Just to demonstrate how quickly we can start working, let's start with a new bla
 Create a new Next.js project.
 
 ```txt
-npx create-next-app contentlayer-example
+npx create-next-app wesjet-example
 ```
 
-That command will place the project in a `contentlayer-example` directory. Change into that directory.
+That command will place the project in a `wesjet-example` directory. Change into that directory.
 
 ```txt
-cd contentlayer-example
+cd wesjet-example
 ```
 
 ### Add Tailwind
 
 If you'd like to see some styling as we go without much extra effort, [follow these instructions](https://tailwindcss.com/docs/guides/nextjs) to add Tailwind to your project.
 
-## 2. Install Contentlayer
+## 2. Install Wesjet
 
-Install Contentlayer and the Next.js plugin.
+Install Wesjet and the Next.js plugin.
 
 ```txt
-npm install contentlayer wesjet-nextjs-plugin
+npm install wesjet wesjet-nextjs-plugin
 ```
 
-To hook Contentlayer into the `next dev` and `next build` processes, you'll want to wrap the Next.js configuration using the `withWesjet` method.
+To hook Wesjet into the `next dev` and `next build` processes, you'll want to wrap the Next.js configuration using the `withWesjet` method.
 
 Create a new file called `next.config.mjs` in the root of your project, and add the following content.
 
@@ -78,11 +78,11 @@ Then add the following lines to your `tsconfig.json` or `jsconfig.json` file:
 }
 ```
 
-Contentlayer generates files in the `.wesjet/jetpack` directory. This tells JavaScript (or TypeScript) to create an alias of `wesjet/jetpack` to the generated files directory.
+Wesjet generates files in the `.wesjet/jetpack` directory. This tells JavaScript (or TypeScript) to create an alias of `wesjet/jetpack` to the generated files directory.
 
 ## 3. Define Post Schema
 
-Now that we have everything installed, we can begin to define our document schema. A document is an individual piece of content that Contentlayer transforms into data you can use in your components.
+Now that we have everything installed, we can begin to define our document schema. A document is an individual piece of content that Wesjet transforms into data you can use in your components.
 
 Because we're building a simple blog site, let's define a single document type called `Post`. Create a file `wesjet.config.js` in the root of your project, and add the following content.
 
@@ -124,7 +124,7 @@ This configuration specifies a single document type called `Post`. These documen
 
 - `title`: String pulled from the file's frontmatter.
 - `date`: JavaScript `Date` object, pulled from the file's frontmatter.
-- `body`: An object that contains the `raw` content from the markdown file and the converted `html` string. (This is built into Contentlayer by default and does not have to be defined.)
+- `body`: An object that contains the `raw` content from the markdown file and the converted `html` string. (This is built into Wesjet by default and does not have to be defined.)
 - `url`: A string that takes the name of the file (without the extension) and prepends `/posts/` to it, thus defining that path at which that content will be available on your site. (More on this soon.)
 
 ## 4. Add Post Content
@@ -298,7 +298,7 @@ const PostLayout = ({ post }) => {
 export default PostLayout
 ```
 
-Notice again that we're importing data from `wesjet/jetpack`. This is the beauty of Contentlayer. It has already loaded and shaped our date and keeps the logic in `getStaticPaths()` and `getStaticProps()` nice and simple.
+Notice again that we're importing data from `wesjet/jetpack`. This is the beauty of Wesjet. It has already loaded and shaped our date and keeps the logic in `getStaticPaths()` and `getStaticProps()` nice and simple.
 
 Now clicking on a post link from the home page should lead you to a working post page.
 
@@ -306,11 +306,11 @@ Now clicking on a post link from the home page should lead you to a working post
 
 ## Next Steps
 
-You now have a simple blog site with Next.js and Contentlayer! 🎉
+You now have a simple blog site with Next.js and Wesjet! 🎉
 
-This is just the beginning. Now you can dig in and add all the bells and whistles necessary to build a site with great content using Contentlayer. Here are a few suggestions:
+This is just the beginning. Now you can dig in and add all the bells and whistles necessary to build a site with great content using Wesjet. Here are a few suggestions:
 
-- Jump into [the conceptual guides](/docs/concepts) to learn more about [how Contentlayer works](/docs/concepts/how-contentlayer-works).
+- Jump into [the conceptual guides](/docs/concepts) to learn more about [how Wesjet works](/docs/concepts/how-wesjet-works).
 - [Join our Discord community](https://discord.gg/rytFErsARm) to ask questions, stay up to date, and share your work.
-- Check out [the examples](/examples) for inspiration on what you can do with Contentlayer.
+- Check out [the examples](/studio) for inspiration on what you can do with Wesjet.
 - Explore [local file source guides](/docs/maker/files) for learning about specific techniques.

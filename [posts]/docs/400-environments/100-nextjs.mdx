@@ -1,13 +1,13 @@
 ---
 title: Next.js
-excerpt: Use the wesjet-nextjs-plugin plugin to tightly integrate Contentlayer into a Next.js project.
+excerpt: Use the wesjet-nextjs-plugin plugin to tightly integrate Wesjet into a Next.js project.
 ---
 
-Contentlayer has full support for Next.js projects, including live reloading (if you follow the recommended approach below).
+Wesjet has full support for Next.js projects, including live reloading (if you follow the recommended approach below).
 
 ## Installation & Configuration
 
-Using Contentlayer in a Next.js project is easiest if you use the [`wesjet-nextjs-plugin`](/docs/reference/wesjet-nextjs-plugin) plugin. Install the plugin:
+Using Wesjet in a Next.js project is easiest if you use the [`wesjet-nextjs-plugin`](/docs/reference/wesjet-nextjs-plugin) plugin. Install the plugin:
 
 ```txt
 npm install wesjet-nextjs-plugin
@@ -23,7 +23,7 @@ export default withWesjet({})
 
 ## Working with Images
 
-Image processing with Contentlayer is not currently supported, although we're planning on it. The current recommendation is to place images in the `public` directory, and then use a `string` field to store the path to that image.
+Image processing with Wesjet is not currently supported, although we're planning on it. The current recommendation is to place images in the `public` directory, and then use a `string` field to store the path to that image.
 
 Alternatively, you can store your images in an asset service like Cloudinary or Imgix. [See here for more detail](/docs/maker/files/images) on our current recommendation for image processing.
 

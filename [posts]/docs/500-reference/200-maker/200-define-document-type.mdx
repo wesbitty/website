@@ -5,7 +5,7 @@ excerpt: Technical reference for defining a document's type schema.
 
 `defineDocumentType` defines the schema for one particular document type, often referred to as a model or content type.
 
-Document type definitions are used within the options for [`makeSource`](/docs/reference/source-files/make-source), which is how the definition is passed onto Contentlayer.
+Document type definitions are used within the options for [`makeSource`](/docs/reference/source-files/make-source), which is how the definition is passed onto Wesjet.
 
 ## Usage
 
@@ -103,11 +103,11 @@ How the main content area of the file should be parsed. It is treated as markdow
 
 ### `isSingleton` (default: `false`)
 
-By default, Contentlayer will grab any files matching the `filePathPattern`. Setting the document type to be a singleton means that Contentlayer will grab a single file and export a single object for use in your project.
+By default, Wesjet will grab any files matching the `filePathPattern`. Setting the document type to be a singleton means that Wesjet will grab a single file and export a single object for use in your project.
 
 **Example:**
 
-In this example, Contentlayer would export a `globalConfig` data object with the content from `config/global.yaml` (inside the main content directory). The type definition for the object would match the name (`GlobalConfig`), as in non-singleton types.
+In this example, Wesjet would export a `globalConfig` data object with the content from `config/global.yaml` (inside the main content directory). The type definition for the object would match the name (`GlobalConfig`), as in non-singleton types.
 
 ```js
 defineDocumentType(() => ({

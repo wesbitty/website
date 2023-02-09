@@ -11,7 +11,7 @@ import { Paragraph } from '../../components/landing-page/Paragraph'
 import { BlogPreview } from 'src/components/blog/BlogPreview'
 
 const content = {
-  title: 'Contentlayer Blog',
+  title: 'Latest Article',
   description: `Working with content for the web shouldn't be difficult. That's why we built Contentlayer.`,
 }
 

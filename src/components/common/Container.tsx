@@ -3,19 +3,19 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { SearchProvider } from '../SearchContext'
 import { MainNavigation } from './MainNavigation'
-import { Footer } from './Footer'
+import { Footer } from '../Widget'
 
 export const Container: FC<any> = ({ children, ...customMeta }) => {
   const router = useRouter()
 
-  const baseUrl = `https://www.contentlayer.dev`
+  const baseUrl = `https://www.wesbitty.com`
 
   const meta = {
-    title: 'Contentlayer makes content easy for developers',
+    title: 'Wesjet makes content easy for developers',
     description:
-      'Contentlayer is a content SDK that validates and transforms your content into type-safe JSON data you can easily import into your application.',
+      'Wesjet is a content SDK that validates and transforms your content into type-safe JSON data you can easily import into your application.',
     url: customMeta.urlPath ? `${baseUrl}${customMeta.urlPath}` : baseUrl,
-    name: 'Contentlayer',
+    name: 'Wesbitty',
     image: customMeta.imagePath ? `${baseUrl}${customMeta.imagePath}` : `${baseUrl}/images/beta-launch-post-meta.png`,
     type: 'website',
     ...customMeta,

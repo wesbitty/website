@@ -14,7 +14,7 @@ import Link from 'next/link'
 const content = {
   heading: 'Content made easy for developers',
   recentBlogPost: {
-    title: 'Introducing Contentlayer (Beta): Content Made Easy for Developers',
+    title: 'Introducing Wesjet (Beta): Content Made Easy for Developers',
     url: '/blog/beta',
   },
   text: (

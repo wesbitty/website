@@ -9,10 +9,9 @@ import { ColorSchemeSwitcher } from './ColorSchemeSwitcher'
 import { isExternalUrl } from '../../utils/helpers'
 
 const navLinks: Array<{ label: string; url: string }> = [
-  { label: 'Documentation', url: '/docs' },
   { label: 'Blog', url: '/blog' },
-  // NOTE until we have a proper example overview page and multiple examples, link directly to Next.js example
-  { label: 'Examples', url: '/examples/nextjs' },
+  { label: 'Developer', url: '/docs' },
+  { label: 'Studio', url: '/examples/nextjs' },
 ]
 
 const iconLinks: Array<{ label: string; icon: IconName; url: string }> = [
@@ -79,10 +78,10 @@ export const MainNavigation = () => {
           <Link href="/">
             <a className="flex items-center space-x-2.5 font-bold text-slate-800 no-underline dark:text-white">
               <Logo />
-              <span className="-mt-0.5">Contentlayer</span>
+              <span className="-mt-0.5">Wesbitty Inc</span>
             </a>
           </Link>
-          <Label text="Beta" />
+          <Label text="Development" />
         </div>
         <div className="lg:hidden">
           <button

@@ -1,0 +1,82 @@
+[
+    {
+      "title": "Product",
+      "elements": [
+        {
+          "text": "Wesjet",
+          "href": "/product/wesjet",
+          "url": "/product/wesjet"
+        },
+        {
+          "text": "Brand Assets",
+          "href": "/brand/assets",
+          "url": "/brand/assets"
+        },
+        {
+          "text": "Api Functions",
+          "href": "#",
+          "url": null
+        }
+      ]
+    },
+    {
+      "title": "About",
+      "elements": [
+        {
+          "text": "Wesbitty, Inc",
+          "href": "/about/wesbitty",
+          "url": "/about/wesbitty"
+        },
+        {
+          "text": "Investors",
+          "href": "/about/investors",
+          "url": "/about/investors"
+        },
+        {
+          "text": "Policies",
+          "href": "/policy",
+          "url": "/policy"
+        },
+        {
+          "text": "Terms of Use",
+          "href": "/about/terms",
+          "url": "/about/terms"
+        }
+      ]
+    },
+    {
+      "title": "Developers",
+      "elements": [
+        {
+          "text": "Documentation",
+          "href": "/docs",
+          "url": "/docs"
+        },
+        {
+          "text": "API Reference",
+          "href": "/docs/client/wesjet-client",
+          "url": "/docs/client/wesjet-client"
+        },
+        {
+          "text": "Guides",
+          "href": "/docs/guides/examples",
+          "url": "/docs/guides/examples"
+        }
+      ]
+    },
+    {
+      "title": "Help",
+      "elements": [
+        {
+          "text": "Help Center",
+          "href": "/support",
+          "url": "/support"
+        },
+        {
+          "text": "Privacy settings",
+          "href": "/server",
+          "url": "/server"
+        }
+      ]
+    }
+  ]

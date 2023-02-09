@@ -211,10 +211,10 @@ export default function Home({ posts }) {
   return (
     <div className="mx-auto max-w-2xl py-16 text-center">
       <Head>
-        <title>Contentlayer Blog Example</title>
+        <title>Latest Article Example</title>
       </Head>
 
-      <h1 className="mb-8 text-3xl font-bold">Contentlayer Blog Example</h1>
+      <h1 className="mb-8 text-3xl font-bold">Latest Article Example</h1>
 
       {posts.map((post, idx) => (
         <PostCard key={idx} {...post} />

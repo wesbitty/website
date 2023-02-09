@@ -12,7 +12,7 @@ export const Author: FC<{ name: string; handle: string; avatar: string }> = ({ n
       </div>
       <div className="not-prose leading-tight">
         <p className="mb-0 font-semibold text-slate-700 dark:text-slate-300">{name}</p>
-        <Link href={'https://twitter.com/' + handle}>
+        <Link href={'https://github.com/' + handle}>
           <a target="_blank" rel="noreferrer" className="text-sm text-slate-500 dark:text-slate-400">
             {'@' + handle}
           </a>

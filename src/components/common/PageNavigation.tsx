@@ -1,5 +1,5 @@
 import { FC, useState, useEffect } from 'react'
-import { type DocHeading } from '../../contentlayer/document/Doc'
+import { type DocHeading } from '../../lib/document/Doc'
 import { getNodeText, sluggifyTitle } from '../../utils/sluggify'
 import { Icon } from './Icon'
 
